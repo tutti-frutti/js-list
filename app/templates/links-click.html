@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('includes/head.html')
+<!--@@include('includes/header.html')-->
+
+<style>
+    .maintance {
+        padding: 15px;
+        margin: 30px auto 0;
+        width: 500px;
+        border: 1px dashed gray;
+    }
+
+    .links-result {
+        padding: 10px;
+        margin: 10px 0 0;
+        border: 1px dotted silver;
+    }
+</style>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm col-md-12 col-xl-12">
+                    <div class="maintance">
+                        <ul class="links">
+                            <li><a href="#" data-name="Один">Ссылка-1</a></li>
+                            <li><a href="#" data-name="Два">Ссылка-2</a></li>
+                            <li><a href="#" data-name="Три">Ссылка-3</a></li>
+                        </ul>
+                        <div class="links-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--        @@include('includes/footer.html')-->
+    <script>
+        const result = document.getElementsByClassName('links-result');
+        let controls = document.querySelectorAll('.links li a');
+        let controlData = ' ';
+
+        for (let i = 0; i < controls.length; i++) {
+            controls[i].addEventListener('click', function() {
+                controlData = controls[i].getAttribute('data-name');
+                console.log(controlData);
+                result.innerHTML = controlData;
+            });
+        }
+    </script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

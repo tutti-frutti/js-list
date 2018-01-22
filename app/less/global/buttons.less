@@ -1,0 +1,60 @@
+.snap {
+    .dib(top);
+    padding: 0 5px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+    &._painted {
+        width: 100%;
+        font-size: 16px;
+        line-height: 45px;
+        font-weight: 500;
+        border-radius: 5px;
+        border: none;
+        color: @wh;
+        background: @blue;
+        transition: .3s;
+        &:hover {
+            background: #3c8de7;
+        }
+    }
+    &._transparent {
+        width: 100%;
+        font-size: 16px;
+        line-height: 41px;
+        font-weight: 500;
+        border-radius: 5px;
+        border: 2px solid #3370b7;
+        color: #1a1a1a;
+        transition: .3s;
+        &:hover {
+            color: @wh;
+            background: #3772b3;
+        }
+    }
+    &._md {
+        width: 216px;
+        @media (min-width: 990px) and (max-width: 1200px){
+            width: 180px;
+            font-size: 14px;
+            line-height: 39px;
+        }
+        @media(max-width: @tablet){
+            width: 180px;
+        }
+    }
+    &._xs {
+        width: 130px;
+        @media (min-width: 990px) and (max-width: 1200px){
+            width: 100px;
+            font-size: 14px;
+            line-height: 39px;
+        }
+    }
+}
