@@ -53,6 +53,7 @@ gulp.task('scripts', function () {
         'node_modules/unveil2/dist/jquery.unveil2.min.js',
         'node_modules/object-fit-images/dist/ofi.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

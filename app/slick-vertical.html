@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+<!--    <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js" integrity="sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=" crossorigin="anonymous"></script>-->
+    <title>Gulp Less1</title>
+</head>
+
+
+<style>
+    body {
+        background: #ccc;
+    }
+
+    .main {
+        font-family: Arial;
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    h3 {
+        background: #fff;
+        color: #3498db;
+        font-size: 36px;
+        line-height: 100px;
+        margin: 10px;
+        padding: 2%;
+        position: relative;
+        text-align: center;
+    }
+    .slider_preview h3 {
+        height: 491px;
+    }
+    .slider_wrapper {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+    
+    .slider_preview {
+        width: 70%;
+    }
+    .slider_thumbs {
+        width: 30%;
+    }
+    
+</style>
+
+<body>
+
+    <main>
+
+        <div class="main slider_wrapper">
+            <div class="slider slider-for slider_preview">
+                <div>
+                    <h3>1</h3>
+                </div>
+                <div>
+                    <h3>2</h3>
+                </div>
+                <div>
+                    <h3>3</h3>
+                </div>
+                <div>
+                    <h3>4</h3>
+                </div>
+                <div>
+                    <h3>5</h3>
+                </div>
+            </div>
+            <div class="slider slider-nav slider_thumbs">
+                <div>
+                    <h3>1</h3>
+                </div>
+                <div>
+                    <h3>2</h3>
+                </div>
+                <div>
+                    <h3>3</h3>
+                </div>
+                <div>
+                    <h3>4</h3>
+                </div>
+                <div>
+                    <h3>5</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true,
+            vertical: true
+        });
+    </script>
+</body>
+
+</html>
